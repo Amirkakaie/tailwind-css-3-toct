@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
@@ -18,6 +19,8 @@
     --font-weight-light: 300;
     --font-weight-medium: 500;
     --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
+    --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -171,29 +174,44 @@
   .m-auto {
     margin: auto;
   }
-  .mt-1 {
-    margin-top: calc(var(--spacing) * 1);
-  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
   .mt-2\.5 {
     margin-top: calc(var(--spacing) * 2.5);
   }
-  .mt-13 {
-    margin-top: calc(var(--spacing) * 13);
-  }
-  .mt-14 {
-    margin-top: calc(var(--spacing) * 14);
-  }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
   }
   .flex {
     display: flex;
   }
   .table {
     display: table;
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-\[100px\] {
+    width: 100px;
+  }
+  .w-\[200px\] {
+    width: 200px;
+  }
+  .w-\[300px\] {
+    width: 300px;
+  }
+  .w-\[400px\] {
+    width: 400px;
+  }
+  .w-\[700px\] {
+    width: 700px;
+  }
+  .w-\[800px\] {
+    width: 800px;
   }
   .max-w-\[1100px\] {
     max-width: 1100px;
@@ -228,14 +246,23 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
+  .gap-14 {
+    gap: calc(var(--spacing) * 14);
+  }
+  .gap-17 {
+    gap: calc(var(--spacing) * 17);
   }
   .gap-\[50px\] {
     gap: 50px;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
+  }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-4xl {
+    border-radius: var(--radius-4xl);
   }
   .rounded-\[12px\] {
     border-radius: 12px;
@@ -244,17 +271,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-1 {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
-  }
-  .border-solid {
-    --tw-border-style: solid;
-    border-style: solid;
   }
   .border-\[\#6C5CE7\] {
     border-color: #6C5CE7;
@@ -262,20 +281,29 @@
   .border-\[\#49BBBD\] {
     border-color: #49BBBD;
   }
+  .bg-\[\#49BBBD\] {
+    background-color: #49BBBD;
+  }
+  .bg-\[\#252641\] {
+    background-color: #252641;
+  }
+  .bg-\[\#\] {
+    background-color: #;
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
-  }
-  .px-3\.5 {
-    padding-inline: calc(var(--spacing) * 3.5);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
+  }
+  .px-20 {
+    padding-inline: calc(var(--spacing) * 20);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -292,8 +320,20 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-9 {
+    padding-top: calc(var(--spacing) * 9);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pt-\[25px\] {
     padding-top: 25px;
@@ -316,13 +356,6 @@
   .text-\[12px\] {
     font-size: 12px;
   }
-  .text-\[18px\] {
-    font-size: 18px;
-  }
-  .font-extralight {
-    --tw-font-weight: var(--font-weight-extralight);
-    font-weight: var(--font-weight-extralight);
-  }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
@@ -334,15 +367,11 @@
   .text-\[\#49BBBD\] {
     color: #49BBBD;
   }
-  .text-\[\#\] {
-    color: #;
+  .text-white {
+    color: var(--color-white);
   }
   .underline {
     text-decoration-line: underline;
-  }
-  .shadow {
-    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
